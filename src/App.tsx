@@ -1,5 +1,7 @@
 import "./App.css";
+import Details from "./components/Details";
 import Footer from "./components/Footer";
+import Home from "./components/Home";
 import Navbar from "./components/Navbar";
 
 function App() {
@@ -12,6 +14,9 @@ function App() {
     <div className="App">
       {/* <Navbar></Navbar> */}
       <Navbar />
+      <Home />
+      <br />
+      <Details />
       <p>{devName}</p>
       <img src={imgUrl} alt="giraffe" width={500} />
       <div>{Math.random() * 100}</div>
