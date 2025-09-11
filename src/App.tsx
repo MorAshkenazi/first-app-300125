@@ -2,7 +2,11 @@ import "./App.css";
 import Details from "./components/Details";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
+import Message from "./components/Message";
+import Message2 from "./components/Message2";
+import Message3 from "./components/Message3";
 import Navbar from "./components/Navbar";
+import Products from "./components/Products";
 
 function App() {
   let devName: string = "Mor";
@@ -14,6 +18,10 @@ function App() {
     <div className="App">
       {/* <Navbar></Navbar> */}
       <Navbar />
+      <Products />
+      <Message isAdmin={false} />
+      <Message2 isAdmin={true} />
+      <Message3 isAdmin={true} />
       <Home />
       <br />
       <Details />
