@@ -7,6 +7,7 @@ import Message2 from "./components/Message2";
 import Message3 from "./components/Message3";
 import Navbar from "./components/Navbar";
 import Products from "./components/Products";
+import Users from "./components/Users";
 
 function App() {
   let devName: string = "Mor";
@@ -18,16 +19,17 @@ function App() {
     <div className="App">
       {/* <Navbar></Navbar> */}
       <Navbar />
-      <Products />
+      <Users />
+      {/* <Products />
       <Message isAdmin={false} />
       <Message2 isAdmin={true} />
       <Message3 isAdmin={true} />
-      <Home />
+      <Home /> */}
       <br />
       <Details />
-      <p>{devName}</p>
+      {/* <p>{devName}</p>
       <img src={imgUrl} alt="giraffe" width={500} />
-      <div>{Math.random() * 100}</div>
+      <div>{Math.random() * 100}</div> */}
       <Footer dev={devName} year={year} />
     </div>
   );
