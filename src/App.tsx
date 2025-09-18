@@ -8,6 +8,7 @@ import Message3 from "./components/Message3";
 import Navbar from "./components/Navbar";
 import Products from "./components/Products";
 import Users from "./components/Users";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 function App() {
   let devName: string = "Mor";
@@ -17,22 +18,39 @@ function App() {
 
   return (
     <div className="App">
-      {/* <Navbar></Navbar> */}
-      <Navbar />
-      <Users />
-      {/* <Products />
-      <Message isAdmin={false} />
-      <Message2 isAdmin={true} />
-      <Message3 isAdmin={true} />
-      <Home /> */}
-      <br />
-      <Details />
-      {/* <p>{devName}</p>
-      <img src={imgUrl} alt="giraffe" width={500} />
-      <div>{Math.random() * 100}</div> */}
-      <Footer dev={devName} year={year} />
+      <Router>
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/products" element={<Products />} />
+          <Route path="/users" element={<Users />} />
+        </Routes>
+        <Footer dev={devName} year={year} />
+      </Router>
     </div>
   );
 }
 
 export default App;
+
+{
+  /* <Navbar></Navbar> */
+}
+{
+  /* <Products />
+      <Message isAdmin={false} />
+      <Message2 isAdmin={true} />
+      <Message3 isAdmin={true} />
+      <Home /> */
+}
+{
+  /* <p>{devName}</p>
+      <img src={imgUrl} alt="giraffe" width={500} />
+      <div>{Math.random() * 100}</div> */
+}
+{
+  /* <Users />
+
+      <br />
+      <Details /> */
+}

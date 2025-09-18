@@ -1,16 +1,18 @@
 import { FunctionComponent } from "react";
+import { NavLink } from "react-router-dom";
 
 interface NavbarProps {}
 
 const Navbar: FunctionComponent<NavbarProps> = () => {
   return (
     <>
-      <a href="/" style={{ color: "red", backgroundColor: "yellow" }}>
+      <NavLink to="/" style={{ color: "red", backgroundColor: "yellow" }}>
         Home
-      </a>
-      <a className="nav-item" href="/contacts">
-        Contacts
-      </a>
+      </NavLink>
+      <NavLink className="nav-item" to="/products">
+        Products
+      </NavLink>
+      <NavLink to="/users">Users</NavLink>
     </>
   );
 };
