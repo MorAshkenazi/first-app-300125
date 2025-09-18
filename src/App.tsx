@@ -1,10 +1,6 @@
 import "./App.css";
-import Details from "./components/Details";
 import Footer from "./components/Footer";
 import Home from "./components/Home";
-import Message from "./components/Message";
-import Message2 from "./components/Message2";
-import Message3 from "./components/Message3";
 import Navbar from "./components/Navbar";
 import Pnf from "./components/Pnf";
 import Products from "./components/Products";
