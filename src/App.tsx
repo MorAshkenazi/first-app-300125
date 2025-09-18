@@ -6,7 +6,9 @@ import Message from "./components/Message";
 import Message2 from "./components/Message2";
 import Message3 from "./components/Message3";
 import Navbar from "./components/Navbar";
+import Pnf from "./components/Pnf";
 import Products from "./components/Products";
+import UserDetails from "./components/UserDetails";
 import Users from "./components/Users";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -23,7 +25,14 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/products" element={<Products />} />
-          <Route path="/users" element={<Users />} />
+          <Route path="/users">
+            <Route index element={<Users />} />
+            {/* /users/:id */}
+            <Route path=":id" element={<UserDetails />} />
+            {/* /users/new */}
+            {/* <Route path="new" element={<NewUser />} /> */}
+          </Route>
+          <Route path="*" element={<Pnf />} />
         </Routes>
         <Footer dev={devName} year={year} />
       </Router>

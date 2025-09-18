@@ -1,4 +1,5 @@
 import { FunctionComponent, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 interface UsersProps {}
 
@@ -26,7 +27,9 @@ const Users: FunctionComponent<UsersProps> = () => {
           <tbody>
             {users.map((user: any) => (
               <tr key={user.id}>
-                <td>{user.id}</td>
+                <td>
+                  <Link to={`/users/${user.id}`}>{user.id}</Link>
+                </td>
                 <td>{user.name}</td>
                 <td>{user.email}</td>
                 <td>{user.phone}</td>
