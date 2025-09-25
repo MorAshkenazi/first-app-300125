@@ -14,6 +14,7 @@ const Navbar: FunctionComponent<NavbarProps> = () => {
       </NavLink>
       <NavLink to="/users">Users</NavLink>
       <NavLink to="/register">Register</NavLink>
+      <NavLink to="/register2">Register2</NavLink>
     </>
   );
 };
